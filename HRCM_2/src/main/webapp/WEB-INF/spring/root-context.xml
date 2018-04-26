@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd  
+      http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd  
+      http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+ 
+	<!-- Root Context: defines shared resources visible to all other web components -->
+		<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+
+<!-- 	<property name="host" value="webmail.elakk.com" />
+	<property name="port" value="25"></property> -->
+		<property name="username" value="hr@elakk.com" />
+		<property name="password" value="elakkhr12#$%" />
+		<property name="javaMailProperties">
+			<props>
+				 <prop key="mail.smtp.host">209.59.146.88</prop>
+				<prop key="mail.smtp.port">25</prop>
+				<prop key="mail.smtp.email">hr@elakk.com</prop>
+				<!-- <prop key="mail.smtp.email">elakkhr12#$%</prop> -->
+				<prop key="mail.smtp.auth">true</prop>
+				<prop key="mail.debug">true</prop>
+				<prop key="mail.smtp.starttls.enable">true</prop>
+                                <!--for server using email SSL -->
+                               <!--  <prop key="mail.smtp.ssl.trust">webmail.elakk.com</prop> -->
+			</props>
+		</property>
+	</bean>
+</beans>
